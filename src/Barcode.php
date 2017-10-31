@@ -105,6 +105,10 @@ class Barcode
 				$barcode = new Barcode\Codabar($code, ($pr > 0) ? $pr : 2.5);
 				break;
 
+            case 'C128': // CODE 128 Auto
+                $barcode = new Barcode\Code128($code, '');
+                break;
+
 			case 'C128A': // CODE 128 A
 				$barcode = new Barcode\Code128($code, 'A');
 				break;
